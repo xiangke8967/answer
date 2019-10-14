@@ -12,5 +12,12 @@ spring:
     view:
       prefix: /WEB-INF/jsp/
       suffix: .jsp
+    #配置静态文件访问
+    static-path-pattern: /static/**
+
 server:
   port: 8001
+  tomcat:
+    uri-encoding: utf-8
+  servlet:
+    context-path: /answer

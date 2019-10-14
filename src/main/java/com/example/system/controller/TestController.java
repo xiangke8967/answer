@@ -1,5 +1,6 @@
 package com.example.system.controller;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -11,7 +12,7 @@ import java.util.Date;
  * @author xk
  * @date 2019-10-13 18:56
  */
-@RestController
+@Controller
 public class TestController {
 
     @RequestMapping("/test")
