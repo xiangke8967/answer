@@ -118,37 +118,24 @@
             <generatedKey column="id" sqlStatement="JDBC"/>
            <domainObjectRenamingRule searchString="^T" replaceString=""/>
         </table>
-
-<!--        <table schema="blog" tableName="role"-->
-<!--               enableInsert="true"-->
-<!--               enableSelectByPrimaryKey="true" enableSelectByExample="true"-->
-<!--               enableUpdateByPrimaryKey="true" enableUpdateByExample="true"-->
-<!--               enableDeleteByPrimaryKey="true" enableDeleteByExample="true"-->
-<!--               enableCountByExample="true">-->
-<!--            <generatedKey column="id" sqlStatement="JDBC"/>-->
-<!--            &lt;!&ndash;            <domainObjectRenamingRule searchString="TbEros" replaceString=""/>&ndash;&gt;-->
-<!--        </table>-->
-
-<!--        <table schema="blog" tableName="people"-->
-<!--               enableInsert="true"-->
-<!--               enableSelectByPrimaryKey="true" enableSelectByExample="true"-->
-<!--               enableUpdateByPrimaryKey="true" enableUpdateByExample="true"-->
-<!--               enableDeleteByPrimaryKey="true" enableDeleteByExample="true"-->
-<!--               enableCountByExample="true">-->
-<!--            <generatedKey column="id" sqlStatement="JDBC"/>-->
-<!--            &lt;!&ndash;            <domainObjectRenamingRule searchString="TbEros" replaceString=""/>&ndash;&gt;-->
-<!--        </table>-->
-
-<!--        <table schema="blog" tableName="people_role"-->
-<!--               enableInsert="true"-->
-<!--               enableSelectByPrimaryKey="true" enableSelectByExample="true"-->
-<!--               enableUpdateByPrimaryKey="true" enableUpdateByExample="true"-->
-<!--               enableDeleteByPrimaryKey="true" enableDeleteByExample="true"-->
-<!--               enableCountByExample="true">-->
-<!--            <generatedKey column="id" sqlStatement="JDBC"/>-->
-<!--            &lt;!&ndash;            <domainObjectRenamingRule searchString="TbEros" replaceString=""/>&ndash;&gt;-->
-<!--        </table>-->
-
+        <table schema="answer" tableName="t_question"
+               enableInsert="true"
+               enableSelectByPrimaryKey="true" enableSelectByExample="true"
+               enableUpdateByPrimaryKey="true" enableUpdateByExample="true"
+               enableDeleteByPrimaryKey="true" enableDeleteByExample="true"
+               enableCountByExample="true">
+            <generatedKey column="id" sqlStatement="JDBC"/>
+            <domainObjectRenamingRule searchString="^T" replaceString=""/>
+        </table>
+        <table schema="answer" tableName="t_user_question"
+               enableInsert="true"
+               enableSelectByPrimaryKey="true" enableSelectByExample="true"
+               enableUpdateByPrimaryKey="true" enableUpdateByExample="true"
+               enableDeleteByPrimaryKey="true" enableDeleteByExample="true"
+               enableCountByExample="true">
+            <generatedKey column="id" sqlStatement="JDBC"/>
+            <domainObjectRenamingRule searchString="^T" replaceString=""/>
+        </table>
 
     </context>
 </generatorConfiguration>

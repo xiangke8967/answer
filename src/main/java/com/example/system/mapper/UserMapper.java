@@ -16,4 +16,6 @@ public interface UserMapper extends Mapper<User> {
     int updateByExampleSelective(@Param("record") User record, @Param("example") UserExample example);
 
     int updateByExample(@Param("record") User record, @Param("example") UserExample example);
+
+    List<User> findByPage();
 }

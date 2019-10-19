@@ -5,6 +5,8 @@ import com.example.system.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public class UserDao {
 
@@ -18,4 +20,6 @@ public class UserDao {
         userMapper.insertSelective(user1);
         return user1.getId();
     }
+
+//    public List<User>
 }

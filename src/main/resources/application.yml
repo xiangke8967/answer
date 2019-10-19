@@ -21,3 +21,8 @@ server:
     uri-encoding: utf-8
   servlet:
     context-path: /answer
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params: count=countSql
