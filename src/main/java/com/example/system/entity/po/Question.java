@@ -5,8 +5,8 @@ import javax.persistence.*;
 import lombok.Data;
 
 @Data
-@Table(name = "`t_user`")
-public class User {
+@Table(name = "`t_question`")
+public class Question {
     /**
      * 主键
      */
@@ -16,28 +16,34 @@ public class User {
     private Integer id;
 
     /**
-     * 账户
+     * 题目名称
      */
-    @Column(name = "`account`")
-    private String account;
+    @Column(name = "`question_name`")
+    private String questionName;
 
     /**
-     * 密码
+     * 选项A
      */
-    @Column(name = "`password`")
-    private String password;
+    @Column(name = "`option_a`")
+    private String optionA;
 
     /**
-     * 姓名
+     * 选项B
      */
-    @Column(name = "`user_name`")
-    private String userName;
+    @Column(name = "`option_b`")
+    private String optionB;
 
     /**
-     * 性别
+     * 选项C
      */
-    @Column(name = "`sex`")
-    private String sex;
+    @Column(name = "`option_c`")
+    private String optionC;
+
+    /**
+     * 选项D
+     */
+    @Column(name = "`option_d`")
+    private String optionD;
 
     /**
      * 创建时间
@@ -46,7 +52,7 @@ public class User {
     private Date createTime;
 
     /**
-     * 更新时间
+     * 最后一次更新时间
      */
     @Column(name = "`update_time`")
     private Date updateTime;

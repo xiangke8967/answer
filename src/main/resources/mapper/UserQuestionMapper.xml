@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.example.system.mapper.UserMapper">
-  <resultMap id="BaseResultMap" type="com.example.system.entity.po.User">
+<mapper namespace="com.example.system.mapper.UserQuestionMapper">
+  <resultMap id="BaseResultMap" type="com.example.system.entity.po.UserQuestion">
     <!--
       WARNING - @mbg.generated
     -->
     <id column="id" jdbcType="INTEGER" property="id" />
-    <result column="account" jdbcType="VARCHAR" property="account" />
-    <result column="password" jdbcType="VARCHAR" property="password" />
-    <result column="user_name" jdbcType="VARCHAR" property="userName" />
-    <result column="sex" jdbcType="CHAR" property="sex" />
+    <result column="question_id" jdbcType="INTEGER" property="questionId" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="is_true" jdbcType="INTEGER" property="isTrue" />
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
     <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
   </resultMap>
@@ -81,9 +80,9 @@
     <!--
       WARNING - @mbg.generated
     -->
-    id, account, password, user_name, sex, create_time, update_time
+    id, question_id, user_id, is_true, create_time, update_time
   </sql>
-  <select id="selectByExample" parameterType="com.example.system.entity.po.UserExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.example.system.entity.po.UserQuestionExample" resultMap="BaseResultMap">
     <!--
       WARNING - @mbg.generated
     -->
@@ -92,7 +91,7 @@
       distinct
     </if>
     <include refid="Base_Column_List" />
-    from t_user
+    from t_user_question
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
@@ -100,20 +99,20 @@
       order by ${orderByClause}
     </if>
   </select>
-  <delete id="deleteByExample" parameterType="com.example.system.entity.po.UserExample">
+  <delete id="deleteByExample" parameterType="com.example.system.entity.po.UserQuestionExample">
     <!--
       WARNING - @mbg.generated
     -->
-    delete from t_user
+    delete from t_user_question
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <select id="countByExample" parameterType="com.example.system.entity.po.UserExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="com.example.system.entity.po.UserQuestionExample" resultType="java.lang.Long">
     <!--
       WARNING - @mbg.generated
     -->
-    select count(*) from t_user
+    select count(*) from t_user_question
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
@@ -122,22 +121,19 @@
     <!--
       WARNING - @mbg.generated
     -->
-    update t_user
+    update t_user_question
     <set>
       <if test="record.id != null">
         id = #{record.id,jdbcType=INTEGER},
       </if>
-      <if test="record.account != null">
-        account = #{record.account,jdbcType=VARCHAR},
+      <if test="record.questionId != null">
+        question_id = #{record.questionId,jdbcType=INTEGER},
       </if>
-      <if test="record.password != null">
-        password = #{record.password,jdbcType=VARCHAR},
+      <if test="record.userId != null">
+        user_id = #{record.userId,jdbcType=INTEGER},
       </if>
-      <if test="record.userName != null">
-        user_name = #{record.userName,jdbcType=VARCHAR},
-      </if>
-      <if test="record.sex != null">
-        sex = #{record.sex,jdbcType=CHAR},
+      <if test="record.isTrue != null">
+        is_true = #{record.isTrue,jdbcType=INTEGER},
       </if>
       <if test="record.createTime != null">
         create_time = #{record.createTime,jdbcType=TIMESTAMP},
@@ -154,12 +150,11 @@
     <!--
       WARNING - @mbg.generated
     -->
-    update t_user
+    update t_user_question
     set id = #{record.id,jdbcType=INTEGER},
-      account = #{record.account,jdbcType=VARCHAR},
-      password = #{record.password,jdbcType=VARCHAR},
-      user_name = #{record.userName,jdbcType=VARCHAR},
-      sex = #{record.sex,jdbcType=CHAR},
+      question_id = #{record.questionId,jdbcType=INTEGER},
+      user_id = #{record.userId,jdbcType=INTEGER},
+      is_true = #{record.isTrue,jdbcType=INTEGER},
       create_time = #{record.createTime,jdbcType=TIMESTAMP},
       update_time = #{record.updateTime,jdbcType=TIMESTAMP}
     <if test="_parameter != null">

@@ -1,7 +1,7 @@
 package com.example.system.dao;
 
 import com.example.system.entity.po.User;
-import com.example.system.entity.mapper.UserMapper;
+import com.example.system.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
