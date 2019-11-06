@@ -1,6 +1,11 @@
 package com.example.system.service;
 
-public interface UserService {
+import com.example.system.entity.PageParam;
+import com.example.system.entity.po.User;
 
-    Integer add();
+import java.util.List;
+
+public interface UserService extends IService<User> {
+
+    List<User> findPage(PageParam pageParam);
 }

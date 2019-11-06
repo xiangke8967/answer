@@ -4,7 +4,6 @@ import com.example.system.entity.po.Question;
 import com.example.system.entity.po.QuestionExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
-import org.springframework.stereotype.Repository;
 import tk.mybatis.mapper.common.Mapper;
 
 public interface QuestionMapper extends Mapper<Question> {

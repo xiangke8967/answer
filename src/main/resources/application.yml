@@ -4,8 +4,8 @@ spring:
 
   datasource:
     username: root
-    password: Cs@123456789
-    url: jdbc:mysql://39.108.100.204:3306/answer?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai&verifyServerCertificate=false&zeroDateTimeBehavior=CONVERT_TO_NULL
+    password: Cs@123456
+    url: jdbc:mysql://rm-bp1e42in3hei8loadgo.mysql.rds.aliyuncs.com:3306/answer?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai&verifyServerCertificate=false&zeroDateTimeBehavior=CONVERT_TO_NULL
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   mvc:
@@ -21,6 +21,7 @@ server:
     uri-encoding: utf-8
   servlet:
     context-path: /answer
+
 pagehelper:
   helper-dialect: mysql
   reasonable: true

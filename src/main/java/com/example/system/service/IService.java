@@ -1,14 +1,15 @@
-package com.example.system.dao;
+package com.example.system.service;
 
+import com.example.system.entity.PageParam;
 import com.github.pagehelper.PageInfo;
 
 import java.util.List;
 
 /**
  * @author xk
- * @date 2019-10-17 22:12
+ * @date 2019-10-20 21:52
  */
-public interface IDao<T> {
+public interface IService<T> {
 
     Integer insert(T t);
 
@@ -22,5 +23,5 @@ public interface IDao<T> {
 
     List<T> findList(T t);
 
-    PageInfo<T> findPage(T t);
+    List<T> findPage(T t, PageParam pageParam);
 }
